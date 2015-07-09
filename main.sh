@@ -25,20 +25,24 @@ fi
 out Welcome\ \to\ \Random\ \System. $time 
 out Don\'\t\ \know\ \what\ \to\ \eat? $time
 out Just\ \use\ \the\ \system\ \to\ \decide\ \it\ \for\ \you. $time
+echo "------------------------------------------------------------"
+echo 'Instruction List:'
+echo '1: Create list '
+echo '2: Modify or browse lists that were already created;'
+echo '3: Enter random mode ( choose what to eat today)'
+echo '4: Exit program' 
+echo "------------------------------------------------------------"
 while [ "$ins" != "4" ] 
 do
-	echo "------------------------------------------------------------"
-	echo 'Instruction List:'
-	echo '1: Create list '
-	echo '2: Browse lists that were already created;'
-	echo '3: Enter random mode ( choose what to eat today)'
-	echo '4: Exit program' 
-
 	read -p " Please Enter Instruction... " ins
 
 	#open other application to finish the job
 	if [ "$ins" == "1" ]; then
-		echo 'enter1'
+		out Enter\ \Create\ \List\ \System\ \... $time 
+		echo
+		./Create
+		echo
+		out Exit\ \Create\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time 
 	elif [ "$ins" == "2" ]; then
 		echo 'enter2'	
 	elif [ "$ins" == "3" ]; then
