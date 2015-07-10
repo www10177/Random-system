@@ -27,10 +27,7 @@ out Don\'\t\ \know\ \what\ \to\ \eat? $time
 out Just\ \use\ \the\ \system\ \to\ \decide\ \it\ \for\ \you. $time
 echo "------------------------------------------------------------"
 echo 'Instruction List:'
-echo '1: Create list '
-echo '2: Modify or browse lists that were already created;'
-echo '3: Enter random mode ( choose what to eat today)'
-echo '4: Exit program' 
+echo '1: Create list ' echo '2: Modify or browse lists that were already created;' echo '3: Enter random mode ( choose what to eat today)' echo '4: Exit program' 
 echo "------------------------------------------------------------"
 while [ "$ins" != "4" ] 
 do
