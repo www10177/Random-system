@@ -13,6 +13,7 @@ int main(void)
 
 	printf("\nPlease Enter List Name\n");
 	printf("Limit: less than 100 characters\n");
+	scanf("%[^\n]",name);
 	gets(name);
 	printf("You Entered %s \n\n",name);
 	/*With some bugs that cause segmentaion fualt*/
@@ -83,3 +84,4 @@ int main(void)
 	return 0;
 }
 
+		char temp ;

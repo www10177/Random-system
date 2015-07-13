@@ -11,11 +11,12 @@ out(){
 		echo -n "${s:i:1}"
 		sleep $time 
 	done
-	echo
-}
-
+	echo 
+} 
 #to output intro quickly
-if [ "$1" == "1" ]; then
+#read -p "Input Anything RIGHT NOW to skip Intro...  " -t 1.5 intro
+#echo
+if [ ! -z "$1"  ]; then
 	time=0
 else
 	time=0.05
@@ -27,27 +28,32 @@ out Don\'\t\ \know\ \what\ \to\ \eat? $time
 out Just\ \use\ \the\ \system\ \to\ \decide\ \it\ \for\ \you. $time
 echo "------------------------------------------------------------"
 echo 'Instruction List:'
-echo '1: Create list ' echo '2: Modify or browse lists that were already created;' echo '3: Enter random mode ( choose what to eat today)' echo '4: Exit program' 
+echo '1: Create list '
+echo '2: Modify or browse lists that were already created;'
+echo '3: Enter random mode ( choose what to eat today)'
+echo '4: Exit program'
 echo "------------------------------------------------------------"
+
+#selection
 while [ "$ins" != "4" ] 
 do
 	read -p " Please Enter Instruction... " ins
 
 	#open other application to finish the job
 	if [ "$ins" == "1" ]; then
-		out Enter\ \Create\ \List\ \System\ \... $time 
-		echo
-		./Create
-		echo
-		out Exit\ \Create\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time 
+		out Enter\ \Create\ \List\ \System\ \... $time
+		./Create out Exit\ \Create\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time
 	elif [ "$ins" == "2" ]; then
 		echo 'enter2'	
 	elif [ "$ins" == "3" ]; then
-		echo 'enter3'	
+		out Enter\ \Random\ \List\ \System\ \... $time
+		./Random
+		out Exit\ \Random\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time
 	elif [ "$ins" == "4" ]; then
-		exit 
+		exit 0
 	else
 		echo 'Please Enter Available Instruction...'
 		sleep 1
 	fi
 done
+exit 0  

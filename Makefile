@@ -1,10 +1,10 @@
-Compiler 	= gcc
-Flags    	= -Wall 
+Create Random:Create.c Random.c
+	gcc Create.c -o Create 
+	gcc Random.c -o Random 
 
-Create:Create.c
-	$(Compiler) $(Flags) Create.c -o Create
-clean:
-	rm  Create 
-Cleandat:
-	rm -i .*.dat
+clean: 
+	rm -vf Create Random
+
+cleandat:
+	rm -i .*.dat .name.lst
 
