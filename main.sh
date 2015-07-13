@@ -23,13 +23,13 @@ else
 fi
 
 #intro
-out Welcome\ \to\ \Random\ \System. $time 
+out Welcome\ \to\ \Random\ \System.\ \v0.1 $time 
 out Don\'\t\ \know\ \what\ \to\ \eat? $time
 out Just\ \use\ \the\ \system\ \to\ \decide\ \it\ \for\ \you. $time
 echo "------------------------------------------------------------"
 echo 'Instruction List:'
 echo '1: Create list '
-echo '2: Modify or browse lists that were already created;'
+echo '2: Browse or add item in lists that were already created;'
 echo '3: Enter random mode ( choose what to eat today)'
 echo '4: Exit program'
 echo "------------------------------------------------------------"
@@ -44,7 +44,9 @@ do
 		out Enter\ \Create\ \List\ \System\ \... $time
 		./Create out Exit\ \Create\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time
 	elif [ "$ins" == "2" ]; then
-		echo 'enter2'	
+		out Enter\ \Browse\ \List\ \System\ \... $time
+		./Browse
+		out Exit\ \Browse\ \List\ \System\ \and\ \Go\ \Back\ \to\ \Menu... $time
 	elif [ "$ins" == "3" ]; then
 		out Enter\ \Random\ \List\ \System\ \... $time
 		./Random

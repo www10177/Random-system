@@ -68,10 +68,10 @@ int main(void)
 		item_chosen = rand()%item_num;
 		printf("\n\nThe Result is \t %s\n\n", &item[item_chosen][0]);
 		printf("If you want to random again, just input 'Y'\nOr press input any character to exit\t");
+		/*flush the stdin*/
 		while ( (c = getchar()) != '\n' && c != EOF ) ;
 		temp =getchar();
 		/*scanf("%[^\n]",&temp);	*/
-		/*flush the stdin*/
 		if ( temp != 'y' && temp != 'Y') {
 			break;	 	
 		}
