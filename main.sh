@@ -9,7 +9,11 @@ out(){
 	time=$2
 	for ((i=0; i<${#s} ; i++)) ; do 
 		echo -n "${s:i:1}"
-		sleep $time 
+		read -s -t $time clean &> /dev/null
+		#if [[ $?  == 0 ]]; then
+			#sleep $time
+
+		#fi
 	done
 	echo 
 } 
