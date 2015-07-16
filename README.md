@@ -15,7 +15,7 @@ Limit :
 Delete Lists:
 	Sorry, you can only delete list manually now.
 	There are the steps.
-	First, type "rm .$(LISTNAME).dat" in your shell( Please replace yout list name with $(LISTNAME) )
+	First, type "rm .$(LISTNAME).dat" in your shell( Please replace $(LISTNAME) with your name)
 	Then, edit .name.lst with any editor you like and delete the line that includes your listname
 	There is example instrustion:
 
