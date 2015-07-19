@@ -22,6 +22,7 @@
 	Then, edit .name.lst with any editor you like and delete the line that includes your listname
 	There is example instrustion:
 ```
+	 rm .$(LISTNAME).dat ( Please replace yout list name with $(LISTNAME) )
 	 vim .name.lst
 	 /$(LISTNAME)  ( Please replace yout list name with $(LISTNAME) )
 	 dd
