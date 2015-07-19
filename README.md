@@ -1,9 +1,11 @@
 Before Use:
-	You need to create your own list or download lists (not availabel now)
+	You need to create your own list by this program or download lists (not available now) before doing random
+
 
 Usage:
 	./main.sh [argv1]
 	Key in any char in [argv1] too execute this program QUICKLY.
+
 
 Warning:
 	Please Don't Use Ctrl-C to Terminate the Program or Your Data might Corrupted
@@ -18,11 +20,12 @@ Delete Lists:
 	First, type "rm .$(LISTNAME).dat" in your shell( Please replace $(LISTNAME) with your name)
 	Then, edit .name.lst with any editor you like and delete the line that includes your listname
 	There is example instrustion:
-
+```
 	 vim .name.lst
 	 /$(LISTNAME)  ( Please replace yout list name with $(LISTNAME) )
 	 dd
 	 :wq
+```
 
 	 Or if you want to clean all data
 	 Just input "make cleandat"
