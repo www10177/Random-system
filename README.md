@@ -1,21 +1,21 @@
-##Before Use:
+## Before Use:
 	You need to create your own list by this program or download lists (not available now) 
 	before doing random
 
 
-##Usage:
+## Usage:
 	./main.sh [argv1]
 	Key in any char in [argv1] too execute this program QUICKLY.
 
 
-##Warning:
+## Warning:
 	Please Don't Use Ctrl-C to Terminate the Program or Your Data might Corrupted
 
-##Limit :
+## Limit :
 	List name length is MUST less than 100 characters.
 	Data name length is MUST less than  20 characters.
 
-##Delete Lists:
+## Delete Lists:
 	Sorry, you can only delete list manually now.
 	There are the steps.
 	First, type "rm .$(LISTNAME).dat" in your shell( Please replace $(LISTNAME) with your name)
@@ -32,12 +32,12 @@
 	 Just input "make cleandat"
 	 and Press 'y' repeatedly XDDD
 
-##Some Bugs:
+## Some Bugs:
 	When there are too many item in a list, it might cause error.(MAX:100)
 	In Random, if user don't input a number, it will casue error
 
 
-####Need to Improved:
+#### Need to Improved:
 	When user key in instruction, they can key in 'L' to show instruiction list.
 	Color it !!
 	Convert main to header
